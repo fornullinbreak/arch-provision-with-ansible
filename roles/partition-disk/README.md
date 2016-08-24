@@ -1,7 +1,9 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+Partition sda disk using sgdisk. Using GPT, first partition is boot, then swap ( size equals to double the RAM ) and remaining space is LVM partition.
+
+Based on: https://wiki.archlinux.org/index.php/GUID_Partition_Table
 
 Requirements
 ------------
