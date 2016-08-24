@@ -1,0 +1,8 @@
+---
+# create LVM
+- name: "Create volume"
+  lvg: vg=vg0 pvs=/dev/sda3 
+
+- name: "Create LVM"
+  lvol: vg=vg0 lv=root size=8g
+

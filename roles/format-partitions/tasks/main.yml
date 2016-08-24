@@ -1,0 +1,6 @@
+---
+# tasks file for roles/format-partitions
+- include: "tasks/format_boot.yml"
+- include: "tasks/format_swap.yml"
+- include: "tasks/format_root.yml"
+# TODO: should mount be in format-partitions or as separate role ?

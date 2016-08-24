@@ -1,0 +1,11 @@
+---
+# format root
+
+- name: "Create LVM, including subtask"
+  include: "{{role_path}}/tasks/create_LVM.yml"
+
+# not using xfs as cannot size down.
+- name: "Format root"
+  filesystem: fstype=ext4 dev=/dev/mapper/vg0-root
+
+# TODO: register lvm and take root device from it as we might want to create different vg. But then it might be needed to just describe how you want to partition disk and tell mount points, maybe all as dict in variables ?

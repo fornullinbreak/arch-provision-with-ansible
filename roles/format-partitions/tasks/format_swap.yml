@@ -1,0 +1,12 @@
+---
+# TODO: use swap file, but not when using btrfs
+
+- name: "swapoff if was already enabled"
+  command: swapoff /dev/sda2
+  when: ansible_devices.sda.partitions.sda2 is defined
+
+- name: "Format swap"
+  command: mkswap /dev/sda2
+
+- name: "Activate swap"
+  command: swapon /dev/sda2

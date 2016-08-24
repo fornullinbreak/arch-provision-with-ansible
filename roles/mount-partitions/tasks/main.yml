@@ -1,0 +1,12 @@
+---
+# tasks file for roles/mount-partitions
+- name: "Mount root in /mnt"
+  mount: name=/mnt src=/dev/mapper/vg0-root fstype=ext4 state=present
+
+- name: "Create boot dir in /mnt"
+  file: path=/mnt/boot state=directory
+
+# TODO: we got fstype in 2nd place, 1 was when making filessystem now with mounting, might be worth puting this in vars
+# TODO: mount by label
+- name: "Mount boot in /mnt/boot"
+  mount: name=/mnt/boot src=/dev/sda1 fstype=ext3 state=present

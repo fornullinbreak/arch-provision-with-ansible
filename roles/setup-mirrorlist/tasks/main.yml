@@ -1,0 +1,14 @@
+---
+# tasks file for roles/setup-mirrorlist
+#
+- name: "backup mirrorlist"
+  command: "cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup"
+
+  # TODO: change to lineinfile module
+- name: "uncomment all mirrors"
+  command: "sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup"
+
+- name: "Rank mirrors and leave last 6"
+  shell: "rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist"
+
+# TODO: use  update-pacman-mirrorlist from aur in installed system

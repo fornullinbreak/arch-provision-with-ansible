@@ -4,7 +4,13 @@
   user: root
   roles:  
     - system-clock
+    # - Set the keyboard layout
     - partition-disk
+    - format-partitions
+    - mount-partitions
+    - setup-mirrorlist
+    - install-base-packages
+    # - arch-chroot
     #    - vim
     #    - vim-plugins
     #    - dotfiles

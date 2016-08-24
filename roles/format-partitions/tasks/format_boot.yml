@@ -1,0 +1,4 @@
+---
+# format boot
+- name: "format boot partition"
+  filesystem: fstype=ext3 dev=/dev/sda1

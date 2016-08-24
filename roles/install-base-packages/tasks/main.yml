@@ -1,0 +1,4 @@
+---
+# tasks file for roles/install-base-packages
+- name: "Install the base packages"
+  command: pacstrap /mnt base
