@@ -1,0 +1,9 @@
+---
+- name: "bootstrap ansible with raw module"
+  hosts: all
+  user: root
+  gather_facts: no
+  roles:
+    - bootstrap-ansible
+
+# vim:ft=ansible:

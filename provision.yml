@@ -1,0 +1,14 @@
+---
+- name: "Provision Arch installation"
+  hosts: all
+  user: root
+  roles:  
+    - system-clock
+    - partition-disk
+    #    - vim
+    #    - vim-plugins
+    #    - dotfiles
+
+
+
+

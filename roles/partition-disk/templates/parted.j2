@@ -1,0 +1,9 @@
+parted --script /{{partition_device}} \
+    mklabel gpt \
+    mkpart primary 1MiB 500MiB \
+    {% if create_swap is defined %}
+    mkpart primary 500MiB  1000MiB
+    {% endif %}
+    mkpart primary 500MiB 200MiB \
+
+# or use sgdisk --clear --new 1:0:+500MiB --new 2:0:+${swapspace}MiB --typecode 2:8200 --new 3:0  --typecode 3:8e00 --print /dev/sda

@@ -1,0 +1,4 @@
+---
+# tasks file for system_clock
+- name: "Use timedatectl(1) to ensure the system clock is accurate"
+  shell: timedatectl set-ntp true 

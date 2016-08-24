@@ -1,0 +1,4 @@
+---
+# tasks file for bootstrap-ansible
+- name: "install ansible in Arch installation"
+  raw: pacman --noconfirm -Sy ansible 
