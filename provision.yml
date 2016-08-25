@@ -1,7 +1,10 @@
 ---
+# TODO: this playbook should be called base-install or something like that
 - name: "Provision Arch installation"
   hosts: all
   user: root
+  vars:
+    archchroot: "arch-chroot /mnt"
   roles:  
     - system-clock
     # - Set the keyboard layout
@@ -10,7 +13,11 @@
     - mount-partitions
     - setup-mirrorlist
     - install-base-packages
-    # - arch-chroot
+    # remaining will use arch-chroot
+    - chroot-set-time-zone 
+    # - run-hwclock
+
+    # TODO: below should be separate role and performed after base install and after restart
     #    - vim
     #    - vim-plugins
     #    - dotfiles

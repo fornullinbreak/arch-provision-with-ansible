@@ -1,0 +1,3 @@
+---
+# vars file for roles/chroot-set-time-zone
+timezone: "Europe/London"
