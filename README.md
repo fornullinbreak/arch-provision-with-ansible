@@ -1,6 +1,10 @@
 # arch-provision-with-ansible
 Arch linux installation provisioned with Ansible, for use with thinkpad x61, later for more general use
 
+## WORK IN PROGRESS
+
+It is not finished paybook. I am currently working on it and commit as I go.
+
 ## WARNING
 
 Ansible role is reseting layout of your /dev/sda drive,__YOU WILL LOSE YOUR DATA__,  make sure you look what playbook is doing and test it on virtual mashine first!!
