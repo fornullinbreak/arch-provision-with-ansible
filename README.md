@@ -1,6 +1,15 @@
 # arch-provision-with-ansible
 Arch linux installation provisioned with Ansible, for use with thinkpad x61, later for more general use
 
+## WARNING
+
+Ansible role is reseting layout of your /dev/sda drive,__YOU WILL LOSE YOUR DATA__,  make sure you look what playbook is doing and test it on virtual mashine first!!
+
+## What the script is doing ?
+Performs fresh installation of Arch linux. For now please look into playbooks.
+
+TODO: add more details
+
 ## Precondidtions
 1. You created Arch installation medium
 1. Machine is booted into installation ( machine on which you want to install and provision Arch linux, from now called BOX_A )
