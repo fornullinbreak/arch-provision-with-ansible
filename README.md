@@ -8,4 +8,5 @@ Arch linux installation provisioned with Ansible, for use with thinkpad x61, lat
 
 ## Similar projects
 https://github.com/vvo/ansible-archee
+
 https://github.com/tonyskn/vagrant-arch-ansible
