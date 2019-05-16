@@ -1,4 +1,5 @@
 ---
+# test comment
 # TODO: this playbook should be called base-install or something like that
 - name: "Provision Arch installation"
   hosts: all
